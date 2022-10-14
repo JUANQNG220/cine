@@ -23,7 +23,7 @@ public class ClientController {
     }
 
     @GetMapping("{idClient}")
-    public Optional<ClientModel> getById(@PathVariable("idclient") Integer id){
+    public Optional<ClientModel> getById(@PathVariable("idClient") Integer id){
         return clientService.getById(id);
     }
 

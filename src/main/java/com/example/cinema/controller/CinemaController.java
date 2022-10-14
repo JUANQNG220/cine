@@ -23,7 +23,7 @@ public class CinemaController {
     }
 
     @GetMapping("/{idCinema}")
-    public Optional<CinemaModel> getById(@PathVariable("idcinema")Integer id){
+    public Optional<CinemaModel> getById(@PathVariable("idCinema")Integer id){
         return cinemaService.getById(id);
     }
 

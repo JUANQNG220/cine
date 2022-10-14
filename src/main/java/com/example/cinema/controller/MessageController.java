@@ -24,7 +24,7 @@ public class MessageController {
     }
 
     @GetMapping("/idMessage")
-    public Optional<MessageModel> getById(@PathVariable("idmessage")Integer id){
+    public Optional<MessageModel> getById(@PathVariable("idMessage")Integer id){
         return messageService.getById(id);
     }
 

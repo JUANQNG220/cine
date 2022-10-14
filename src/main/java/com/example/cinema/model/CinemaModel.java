@@ -20,9 +20,9 @@ public class CinemaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
+    private String name;
     private String owner;
     private Integer capacity;
-    private String name;
     private String Description;
 
     @ManyToOne
