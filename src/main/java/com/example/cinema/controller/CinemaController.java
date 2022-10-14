@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/cinema")
+@RequestMapping("/api/Cinema")
 @CrossOrigin(origins = "*",methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class CinemaController {
 
@@ -22,7 +22,7 @@ public class CinemaController {
         return cinemaService.getAll();
     }
 
-    @GetMapping("/{idcinema}")
+    @GetMapping("/{idCinema}")
     public Optional<CinemaModel> getById(@PathVariable("idcinema")Integer id){
         return cinemaService.getById(id);
     }

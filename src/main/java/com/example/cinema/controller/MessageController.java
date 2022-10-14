@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/message")
+@RequestMapping("/api/Message")
 @CrossOrigin(origins = "*",methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class MessageController {
 
@@ -23,7 +23,7 @@ public class MessageController {
         return messageService.getAll();
     }
 
-    @GetMapping("/idmessage")
+    @GetMapping("/idMessage")
     public Optional<MessageModel> getById(@PathVariable("idmessage")Integer id){
         return messageService.getById(id);
     }

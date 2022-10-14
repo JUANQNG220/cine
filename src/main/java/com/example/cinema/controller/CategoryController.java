@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/category")
+@RequestMapping("/api/Category")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST, RequestMethod.PUT,RequestMethod.DELETE})
 public class CategoryController {
 
@@ -23,7 +23,7 @@ public class CategoryController {
         return categoryService.getAll();
     }
 
-    @GetMapping("/{idcategory}")
+    @GetMapping("/{idCategory}")
     public Optional<CategoryModel> getById(@PathVariable("idcategory") Integer id){
         return categoryService.getById(id);
     }

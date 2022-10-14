@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/client")
+@RequestMapping("/api/Client")
 @CrossOrigin(origins = "*",methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 public class ClientController {
 
@@ -22,7 +22,7 @@ public class ClientController {
         return clientService.getAll();
     }
 
-    @GetMapping("{idclient}")
+    @GetMapping("{idClient}")
     public Optional<ClientModel> getById(@PathVariable("idclient") Integer id){
         return clientService.getById(id);
     }

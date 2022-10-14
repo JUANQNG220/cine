@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/reservation")
+@RequestMapping("/api/Reservation")
 @CrossOrigin(origins = "*", methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class ReservationController {
 
@@ -22,7 +22,7 @@ public class ReservationController {
         return reservationService.getAll();
     }
 
-    @GetMapping("/{idreservation}")
+    @GetMapping("/{idReservation}")
     public Optional<ReservationModel> getById(@PathVariable("idreservation") Integer id){
         return reservationService.getById(id);
     }
