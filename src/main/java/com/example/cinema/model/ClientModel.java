@@ -27,9 +27,9 @@ public class ClientModel {
 
     @OneToMany(cascade = {CascadeType.PERSIST})
     @JsonIgnoreProperties("client")
-    private List<MessageModel> messageModels;
+    private List<MessageModel> messages;
 
     @OneToMany(cascade = {CascadeType.PERSIST})
     @JsonIgnoreProperties("client")
-    private List<ReservationModel> reservationModels;
+    private List<ReservationModel> reservations;
 }
