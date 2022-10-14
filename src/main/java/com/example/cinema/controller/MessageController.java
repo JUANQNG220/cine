@@ -23,7 +23,7 @@ public class MessageController {
         return messageService.getAll();
     }
 
-    @GetMapping("/idMessage")
+    @GetMapping("/{idMessage}")
     public Optional<MessageModel> getById(@PathVariable("idMessage")Integer id){
         return messageService.getById(id);
     }

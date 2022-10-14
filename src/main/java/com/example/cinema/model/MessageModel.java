@@ -22,13 +22,13 @@ public class MessageModel {
     private Integer idmessage;
     private String messagetext;
 
-    @ManyToOne
+    @ManyToOne (cascade = {CascadeType.PERSIST})
     @JoinColumn(name="idCinema")
     @JsonIgnoreProperties({"messages","client","reservations"})
     private CinemaModel cinema;
 
     //Pendiente terminar, ver video
-    @ManyToOne
+    @ManyToOne (cascade = {CascadeType.PERSIST})
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties({"messages","client","reservations"})
     private ClientModel client;

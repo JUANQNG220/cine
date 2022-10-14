@@ -35,7 +35,7 @@ public class ReservationService {
     }
 
 
-    //Pendiente el update
+
     public ReservationModel update(ReservationModel reservationModel){
         if(reservationModel.getIdReservation() != null){
             Optional<ReservationModel> optional = reservationRepository.getById(reservationModel.getIdReservation());
