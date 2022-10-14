@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MisionTIC 2022</title>
+    <meta charset="utf-8">
+    
+</head>
+
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myscript.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body onload="readClientes.loadAll()">
+    <form class="left-panel">
+        <h1>GESTION CLIENTES</h1>
+
+        <div>
+            <label for="idCliente">Id Cliente </label>
+            <input id="idCliente" min="0" type="number">
+        </div>
+
+        <div>
+            <label for="nombreCliente">Nombre Cliente </label>
+            <input id="nombreCliente" type="text">
+        </div>
+
+        <div>
+            <label for="emailCliente">Email Cliente </label>
+            <input id="emailCliente" type="text">
+        </div>
+
+        <div>
+            <label for="edadCliente"> Edad Cliente</label>
+            <input id="edadCliente" min="1" type="number">
+        </div>
+
+        <div class="botones">
+            <button onclick="readClientes.guardarCliente()" type="button">GUARDAR</button>
+            <br> <p></p>
+            <button onclick="readClientes.editarCliente()" type="button">ACTUALIZAR</button>
+            <!-- <button onclick="readClientes.loadAll()" type="button">CONSULTAR</button> -->
+        </div>
+        <div class="boton-index"><a href="index.html">Retornar menu principal</a></div>
+    </form>
+
+    <div class="right-panel">
+        <h1>Listado Clientes Cinema</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Correo electronico</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">No hay clientes registrados</td>
+                    </tr>
+                </tbody>
+        </table>
+        <h1>DETALLES DEL CLIENTE SELECCIONADO</h1>
+        <div id="detalle-cliente"> 
+            <p>No se ha seleccionado ningun cliente</p>
+        </div>
+    </div>
+    <!-- <h1>¡Clientes!</h1> 
+    id de Cliente: <input type="number" id="idCliente" /> <br>
+    Nombre de Cliente: <input type="text" id="nombreCliente" /> <br>
+    Correo de Cliente: <input type="text" id="emailCliente" /> <br>
+    Edad de cliente: <input type="number" id="edadCliente" /> <br>
+    
+    <button onclick="guardarCliente()">GUARDAR NUEVO CLIENTE</button>
+    <button onclick="editarCliente()">ACTUALIZAR CLIENTE</button>
+    <button onclick="leerClientes()">CONSULTA CLIENTES</button> -->
+
+    <!-- <div id="listaClientes">
+
+    </div> -->
+
+</body>
+
+</html>

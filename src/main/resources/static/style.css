@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-panel{
+    width: 20%;
+}
+
+.right-panel{
+    width: 80%;
+}
+
+form>div{
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+
+}
+
+label{
+    width: 25%;
+}
+
+input{
+    width: 75%;
+}
+
+button{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td,
+th {
+    padding: 8px;
+    text-align: center;
+    border: 1px black solid;
+}
+
+detalle-clientes {
+    width: 30%;
+}
+
+.botones{
+    padding: 20px;
+    width: 50%;
+
+}
+
+.boton-index {
+    font-style: unset !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: max-content;
+}
