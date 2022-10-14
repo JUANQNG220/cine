@@ -28,7 +28,7 @@ public class MessageService {
         }
         else {
             Optional<MessageModel> optional=messageRepository.getById(messageModel.getIdmessage());
-            if(optional.isEmpty()){
+            if(!optional.isPresent()){
                 return messageRepository.save(messageModel);
             }else{
                 return messageModel;
@@ -39,7 +39,7 @@ public class MessageService {
     public MessageModel update(MessageModel messageModel){
         if(messageModel.getIdmessage() != null){
             Optional<MessageModel> optional = messageRepository.getById(messageModel.getIdmessage());
-            if(!optional.isEmpty()){
+            if(optional.isPresent()){
                 if(messageModel.getMessagetext() != null){
                     optional.get().setMessagetext(messageModel.getMessagetext());
                     optional.get().setClient(messageModel.getClient());

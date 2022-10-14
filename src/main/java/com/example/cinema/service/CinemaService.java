@@ -29,7 +29,7 @@ public class CinemaService {
         }
         else {
             Optional<CinemaModel> optional=cinemaRepository.getById(cinemaModel.getId());
-            if(optional.isEmpty()){
+            if(!optional.isPresent()){
                 return cinemaRepository.save(cinemaModel);
             } else {
                 return cinemaModel;
@@ -41,7 +41,7 @@ public class CinemaService {
     public CinemaModel update(CinemaModel cinemaModel){
         if (cinemaModel.getId() != null) {
             Optional<CinemaModel> optional = cinemaRepository.getById(cinemaModel.getId());
-            if (!optional.isEmpty()) {
+            if (optional.isPresent()) {
                 if (cinemaModel.getOwner() != null) {
                     optional.get().setOwner(cinemaModel.getOwner());
                 }

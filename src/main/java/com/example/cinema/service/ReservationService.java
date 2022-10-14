@@ -26,7 +26,7 @@ public class ReservationService {
         }
         else{
             Optional<ReservationModel> optional=reservationRepository.getById(reservationModel.getIdReservation());
-            if(optional.isEmpty()){
+            if(!optional.isPresent()){
                 return reservationRepository.save(reservationModel);
             }else {
                 return reservationModel;
@@ -39,7 +39,7 @@ public class ReservationService {
     public ReservationModel update(ReservationModel reservationModel){
         if(reservationModel.getIdReservation() != null){
             Optional<ReservationModel> optional = reservationRepository.getById(reservationModel.getIdReservation());
-            if (!optional.isEmpty()){
+            if (optional.isPresent()){
                 if(reservationModel.getStartDate() != null){
                     optional.get().setStartDate(reservationModel.getStartDate());
                 }
