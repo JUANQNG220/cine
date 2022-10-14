@@ -23,7 +23,7 @@ public class CinemaModel {
     private String name;
     private String owner;
     private Integer capacity;
-    private String Description;
+    private String description;
 
     @ManyToOne
     @JoinColumn (name = "IdCategory")
