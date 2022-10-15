@@ -1,11 +1,14 @@
 package com.example.cinema.controller;
 
+import com.example.cinema.model.ClientReport;
 import com.example.cinema.model.ReservationModel;
+import com.example.cinema.model.ReservationReport;
 import com.example.cinema.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,4 +47,20 @@ public class ReservationController {
     public boolean delete(@PathVariable("id") Integer id){
         return reservationService.delete(id);
     }
+
+    @GetMapping("/report-status")
+    public ReservationReport getReservationStatusReport(){
+        return reservationService.getReservationStatusReport();
+    }
+
+    @GetMapping("/report-dates/{dateOne}/{dateTwo}")
+    public List<ReservationModel> getReservationReportDates(@PathVariable("dateOne")String dateOne, @PathVariable("dateTwo")String dateTwo){
+        return reservationService.getReservationPeriod(dateOne, dateTwo);
+    }
+
+    @GetMapping("/report-clients")
+    public List<ClientReport> getReportClients(){
+        return reservationService.getTopClients();
+    }
+
 }

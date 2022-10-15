@@ -4,14 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.core.SpringVersion;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-class ClientReport {
 
-    private long total;
+public class ClientReport {
+    private Long total;
     private ClientModel client;
-
 }
