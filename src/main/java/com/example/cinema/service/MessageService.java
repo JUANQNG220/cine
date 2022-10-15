@@ -56,8 +56,8 @@ public class MessageService {
     }
 
     public boolean delete(Integer id){
-        Boolean aBoolean =getById(id).map(box ->{
-            messageRepository.delete(box);
+        Boolean aBoolean =getById(id).map(messageModel ->{
+            messageRepository.delete(messageModel);
             return true;
         }).orElse(false);
         return aBoolean;

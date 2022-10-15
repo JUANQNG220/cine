@@ -68,8 +68,8 @@ public class ReservationService {
 
 
     public boolean delete(Integer id){
-        Boolean aBoolean=getById(id).map(box->{
-            reservationRepository.delete(box);
+        Boolean aBoolean=getById(id).map(reservationModel->{
+            reservationRepository.delete(reservationModel);
             return true;
         }).orElse(false);
         return aBoolean;

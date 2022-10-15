@@ -61,8 +61,8 @@ public class CategoryService {
 
 
     public boolean delete(Integer id){
-        Boolean aBoolean = getById(id).map(box->{
-            categoryRepository.delete(box);
+        Boolean aBoolean = getById(id).map(categoryModel->{
+            categoryRepository.delete(categoryModel);
             return true;
         }).orElse(false);
         return  aBoolean;

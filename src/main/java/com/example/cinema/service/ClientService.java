@@ -64,8 +64,8 @@ public class ClientService {
 
 
     public boolean delete(Integer id){
-        Boolean aBoolean = getById(id).map(box->{
-            clientRepository.delete(box);
+        Boolean aBoolean = getById(id).map(clientModel->{
+            clientRepository.delete(clientModel);
             return true;
         }).orElse(false);
         return aBoolean;

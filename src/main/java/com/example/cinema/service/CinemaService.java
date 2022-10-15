@@ -69,8 +69,8 @@ public class CinemaService {
     }
 
     public boolean delete(Integer id){
-        Boolean aBoolean = getById(id).map(box ->{
-            cinemaRepository.delete(box);
+        Boolean aBoolean = getById(id).map(cinemaModel ->{
+            cinemaRepository.delete(cinemaModel);
             return true;
         }).orElse(false);
         return aBoolean;
