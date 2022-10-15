@@ -25,7 +25,6 @@ public class MessageModel {
     @JsonIgnoreProperties({"messages","client","reservations"})
     private CinemaModel cinema;
 
-    //Pendiente terminar, ver video
     @ManyToOne
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties({"messages","client","reservations"})

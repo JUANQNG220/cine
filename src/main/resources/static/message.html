@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes</title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripmessage.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body onload="mensaje.getMensaje()">
+    
+   
+
+    <div class="left-panel">
+        
+        <h1>GESTIÓN DE MENSAJES CINEMAS</h1>
+        
+        <div>
+            <label for="idmensaje">Id del mensaje</label>
+            <input id="idmensaje" min=0 type="number">
+
+        </div>
+
+        <div>
+            <label for="textomensaje">Ingrese su mensaje</label>
+            <input id="textomensaje" type="text">
+        </div>
+
+        <div class="botones" >
+            <button onclick="mensaje.savemensaje()" type="button">GUARDAR</button>
+            <button onclick="mensaje.upmensaje()" type="button">ACTUALIZAR</button>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <h1>Listado mensajes Cinemas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mensaje</th>
+                    <th>Id Mensaje</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">No hay disponibles para mostrar</td>
+                    </tr>
+                </tbody>
+        </table>
+        <h1>DETALLES DEL MENSAJE SELECCIONADO</h1>
+        <div id="detalle-mensaje"> 
+            <p>No se ha seleccionado ningun mensaje</p>
+        </div>
+    </div>
+
+</body>
+</html>

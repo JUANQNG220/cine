@@ -46,9 +46,9 @@ public class CategoryService {
                 if(categoryModel.getDescription()!= null){
                     optional.get().setDescription(categoryModel.getDescription());
                 }
-                if(categoryModel.getCinemas()!= null){
-                    optional.get().setCinemas(categoryModel.getCinemas());
-                }
+                //if(categoryModel.getCinemas()!= null){
+                //    optional.get().setCinemas(categoryModel.getCinemas());
+                //}
                 categoryRepository.save(optional.get());
                 return optional.get();
             }else {
