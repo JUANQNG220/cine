@@ -1,6 +1,5 @@
 package com.example.cinema.model;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,4 +30,5 @@ public class MessageModel {
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties({"messages","client","reservations"})
     private ClientModel client;
+
 }
