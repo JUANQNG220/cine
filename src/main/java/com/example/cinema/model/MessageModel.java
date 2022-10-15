@@ -18,9 +18,8 @@ public class MessageModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    private Integer idmessage;
-    private String messagetext;
+    private Integer idMessage;
+    private String messageText;
 
     @ManyToOne
     @JoinColumn(name="idCinema")
@@ -28,7 +27,7 @@ public class MessageModel {
     private CinemaModel cinema;
 
     //Pendiente terminar, ver video
-    @ManyToOne 
+    @ManyToOne
     @JoinColumn(name="idClient")
     @JsonIgnoreProperties({"messages","client","reservations"})
     private ClientModel client;

@@ -23,11 +23,11 @@ public class MessageService {
     }
 
     public MessageModel save(MessageModel messageModel){
-        if(messageModel.getIdmessage() == null){
+        if(messageModel.getIdMessage() == null){
             return messageRepository.save(messageModel);
         }
         else {
-            Optional<MessageModel> optional=messageRepository.getById(messageModel.getIdmessage());
+            Optional<MessageModel> optional=messageRepository.getById(messageModel.getIdMessage());
             if(!optional.isPresent()){
                 return messageRepository.save(messageModel);
             }else{
@@ -37,11 +37,11 @@ public class MessageService {
     }
 
     public MessageModel update(MessageModel messageModel){
-        if(messageModel.getIdmessage() != null){
-            Optional<MessageModel> optional = messageRepository.getById(messageModel.getIdmessage());
+        if(messageModel.getIdMessage() != null){
+            Optional<MessageModel> optional = messageRepository.getById(messageModel.getIdMessage());
             if(optional.isPresent()){
-                if(messageModel.getMessagetext() != null){
-                    optional.get().setMessagetext(messageModel.getMessagetext());
+                if(messageModel.getMessageText() != null){
+                    optional.get().setMessageText(messageModel.getMessageText());
                     optional.get().setClient(messageModel.getClient());
                     optional.get().setCinema(messageModel.getCinema());
                 }
